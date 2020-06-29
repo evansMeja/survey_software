@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='vendors/font-awesome/css/font-awesome.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="vendors/bootstrap.min.css" rel='stylesheet'>
+    <title>Survey!</title>
+  </head>
+  
+  <style>
+  .workplace_item:hover{
+	opacity:.5;
+  }
+  </style>
+  
+  <body style='margin-top:70px;font-family:sans-serif;'>
+	 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+	  <a class="navbar-brand" href="#">Simple Survey</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarText">
+		<ul class="navbar-nav mr-auto">
+		  <li class="nav-item active">
+			<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+		  </li>
+		</ul>
+		<span class="navbar-text">
+		  Welcome back Maniac
+		</span>
+	  </div>
+	</nav>
+  
+    
+	<div class='row mt-4 stresslevl pt-2'>
+		<div class='col-md-8 col-sm-8 col-xs-8 col-8 mx-md-auto mx-sm-auto mx-xs-auto mx-auto pt-3'>
+			<h5 class="shadow-sm p-3 mb-2 bg-white rounded text-dark"> 1. <i class='fa fa-arrow-right'></i> On a scale of 1 to 10 what would you rate your stress level this week?</h5>
+			
+			<div class='row my-4 py-4'>
+				<div class='col-md-8 text-center bg-white py-5 mx-auto' >
+							<div class='row'>
+								<div class='col-md-12 col-xs-12 col-sm-12 col-12'>
+									<div class='bg-light p-3 text-dark float-left w-10 border border-dark rating' style='border-color:#154360'>1</div>
+									<div class='p-3 bg-light text-dark float-left w-10 border border-dark rating'>2</div>
+									<div class='p-3 bg-light text-dark float-left w-10 border border-dark rating'>3</div>
+									<div class='p-3 bg-light text-dark float-left w-10 border border-dark rating'>4</div>
+									<div class='p-3 bg-light text-dark float-left w-10 border border-dark rating'>5</div>
+									<div class='p-3 bg-light text-dark float-left w-10 border border-dark rating'>7</div>
+									<div class='p-3 bg-light text-dark float-left w-10 border border-dark rating'>8</div>
+									<div class='p-3 bg-light text-dark float-left w-10 border border-dark rating'>9</div>
+									<div class='p-3 bg-light text-dark float-left w-10 border border-dark rating'>10</div>
+								</div>
+							</div>
+							
+							<div class='clearfix'></div>
+							
+							<div class='row'>
+								<div class='col-md-12 col-xs-12 col-sm-12 col-12'>
+									<div class='my-3' id='result'></div>
+								</div>
+							</div>	
+						</div>
+			</div>
+			
+			
+			
+			
+			<div class='form-group pull-right mt-5px'>
+				<div class='float-left'>
+				<div class='text-success'>Answered 0 of 4</div>
+				<div class="progress">
+					
+				<div class="progress-bar text-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"> </div>
+					
+				</div>
+				
+				</div>
+				<div class='float-left'><button id='prev_stresslevel' class="bg-primary prev_stresslevel form-control text-white " disabled> <i class="fa fa-chevron-up" aria-hidden="true"></i></button></div>
+				<div class='float-left'><button id='stresslevel' class="bg-primary stresslevel form-control text-white float-left"> <i class="fa fa-chevron-down" aria-hidden="true"></i></button></div>
+			</div>
+			<div class='clearfix'></div>
+		</div>
+	</div>
+	
+	
+	<div class='row mt-4 workplace'>
+		<div class='col-md-8 col-sm-8 col-xs-8 col-8 mx-md-auto mx-sm-auto mx-xs-auto mx-auto'>
+				<h5 class='shadow-sm p-3 mb-2 bg-white rounded text-dark'>2. <i class='fa fa-arrow-right'></i> Which of the following would you like to see more of in your workplace?</h5>
+				<div class='row my-3'>
+				<div class="col-xl-6 col-md-6 mb-4 workplace_item">
+				  <div class="card border-left-warning shadow h-100 py-2">
+					<div class="card-body">
+					  <div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+						<img class='rounded' src='img/A.png'>
+						
+						  <div class="text-xs font-weight-bold text-primary mb-1"><span class='p-1 border border-dark'>A</span> conversation around socially minded people</div>
+						  
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+
+				<div class="col-xl-6 col-md-6 mb-4 workplace_item">
+				  <div class="card border-left-warning shadow h-100 py-2">
+					<div class="card-body">
+					  <div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+						<img class='rounded' src='img/B.png'>
+						  <div class="text-xs font-weight-bold text-primary mb-1"><span class='p-1 border border-dark'>B</span> Training and presentation on skill development</div>
+						  
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				</div>
+
+				<div class='row my-3'>
+				<div class="col-xl-6 col-md-6 mb-4 workplace_item">
+				  <div class="card border-left-warning shadow h-100 py-2">
+					<div class="card-body">
+					  <div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+						<img class='rounded' src='img/C.png'>
+						  <div class="text-xs font-weight-bold text-primary mb-1"><span class='p-1 border border-dark'>C</span> Extra-culiculumn activities</div>
+						  
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+
+				<div class="col-xl-6 col-md-6 mb-4 workplace_item">
+				  <div class="card border-left-warning shadow h-100 py-2">
+					<div class="card-body">
+					  <div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+						<img class='rounded' src='img/D.png'>
+						  <div class="text-xs font-weight-bold text-primary mb-1"><span class='p-1 border border-dark'>D</span> Employees affiliation groups</div>
+						  
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				</div>
+				
+				<div class='row my-3'>
+				  <div class="card border-left-warning shadow h-100 py-2">
+					<div class="card-body">
+					  <div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+						  <div class="text-center text-xs font-weight-bold text-success mb-1 w_result"> Nothing Selected</div>
+						  
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			
+			<div class='form-group pull-right'>
+				<div class='float-left'>
+				<div class='text-success'>Answered 1 of 4</div>
+				<div class="progress">
+					
+					<div class="progress-bar text-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> </div>
+					
+				</div>
+				
+				</div>
+				<div class='float-left'><button id='prev_workplace_next' class="text-white bg-primary prev_workplace_next form-control">  <i class="fa fa-chevron-up" aria-hidden="true"></i></button></div>
+				<div class='float-left'><button id='workplace_next' class="text-white bg-primary stresslevel form-control"> <i class="fa fa-chevron-down" aria-hidden="true"></i></button></div>
+			</div>
+			<div class='clearfix'></div>
+			
+			
+			
+		</div>
+	</div>
+
+	<div class='row mt-4 proffesional_skill py-3'>
+		<div class='col-md-8 col-sm-8 col-xs-8 col-8 mx-md-auto mx-sm-auto mx-xs-auto mx-auto'>
+			<h5 class="shadow-sm p-3 mb-2 bg-white rounded text-dark">3. <i class='fa fa-arrow-right'></i> What is a professional skill you would like to develop??</h5>
+			
+			<div class='form-group py-3'>
+			<input class='form-control' id='profession' type='text'>
+			
+			</div>
+			
+			<div class='form-group pull-right'>
+				<div class='float-left'>
+				<div class='text-success'>Answered 2 of 4</div>
+				<div class="progress">
+					
+					<div class="progress-bar text-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"> </div>
+					
+				</div>
+				
+				</div>
+				<div class='float-left'><button id='prev_proffession_next' class="bg-primary prev_proffession_next form-control text-white"> <i class="fa fa-chevron-up" aria-hidden="true"></i></button></div>
+				<div class='float-left'><button id='proffession_next' class="bg-primary profession_level form-control text-white"> <i class="fa fa-chevron-down" aria-hidden="true"></i></button></div>
+			</div>
+			<div class='clearfix'></div>
+			
+			
+			
+			
+		</div>
+	</div>
+	
+	
+	<div class='row mt-4 final_item py-3'>
+		<div class='col-md-8 col-sm-8 col-xs-8 col-8 mx-md-auto mx-sm-auto mx-xs-auto mx-auto'>
+			<h5 class="shadow-sm p-3 mb-2 bg-white rounded text-dark">4. <i class='fa fa-arrow-right'></i> Do you feel that you are making an impact at your company?</h5>
+			<input type="radio" id="yes" name="impact" value="yes">
+			<label for="yes" checked>Yes</label><br>
+			<input type="radio" id="no" name="impact" value="no">
+			<label for="no">No</label><br>
+			
+			
+			<div id='submit_survey_button' class='mt-4'>
+				<button id='final_item_button_sel' class="bg-dark submit_survey_button text-white rounded p-3" style='font-weight:bold;font-size:15px'> Submit</button>
+			</div>
+
+			
+
+			
+			<div class='form-group pt-3 pull-right'>
+				<div class='float-left'>
+				<div class='text-success'>Answered 3 of 4</div>
+				<div class="progress">
+					
+					<div class="progress-bar text-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"> </div>
+					
+				</div>
+				
+				</div>
+				<div class='float-left'><button id='prev_final_item_button' class="bg-primary prev_final_item_button form-control text-white"> <i class="fa fa-chevron-up" aria-hidden="true"></i></button></div>
+				<div class='float-left'><button id='final_item_button' class="bg-primary final_item form-control text-white"> <i class="fa fa-chevron-down" aria-hidden="true"></i></button></div>
+			</div>
+			<div class='clearfix'></div>
+			
+			
+			
+			
+			
+		</div>
+	</div>
+	
+	<div class='row mt-4 thank_you'>
+		<div class='col-md-8 col-sm-8 col-xs-8 col-8 mx-md-auto mx-sm-auto mx-xs-auto mx-auto'>
+			<img class='rounded mx-auto d-block' src='img/logo.png' style="width:50%">
+			<h4 class="text-dark bg-white text-center">Thank you!</h4>
+			<hr/>
+			<div class='shadow-sm p-3 mb-2 bg-white rounded'>
+				<h5 class="alert alert-info bg-info text-white" id='image_detail'>Data Captured During the Survey?</h5>
+				<p id="s_level"></p>
+				<p id="w_space"></p>
+				<p id="p_skill"></p>
+				<p id="impact"></p>
+				<p id="image_under_survey_val"></p>
+			</div>
+			<hr/>
+			
+			
+			
+			<div class='form-group pull-right'>
+				<div class='float-left'>
+				<div class='text-success'>Answered 4 of 4</div>
+				<div class="progress">
+					
+					<div class="progress-bar text-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"> </div>
+					
+				</div>
+				
+				</div>
+				<div class='float-left'><button class="bg-primary btn_prevous form-control text-white"> <i class="fa fa-chevron-up" aria-hidden="true"></i></button></div>
+				<div class='float-left'><button id='fin_btn' class="bg-white fin_btn form-control text-dark float-left" disabled> <i class="fa fa-chevron-down" aria-hidden="true"></i></button></div>
+	
+			</div>
+			<div class='clearfix'></div>
+			
+			
+		</div>
+	</div>
+		
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="vendors/popper.min.js"></script>
+    <script src="vendors/bootstrap.min.js"></script>
+	
+	<script>
+	
+
+	class Choices {
+		constructor() {
+		this.image_under_survey = 'no image added';
+		this.stresslevel = -1;
+		this.workspace_selected = 'nothing added';
+		this.proffesional_skill = 'nothing added';
+		this.impact = 'nothing added';
+		}
+	}
+	
+	choices_obj = new Choices();
+	var imageid=localStorage.getItem("imageid");
+	choices_obj.image_under_survey = imageid;
+	function display_final_item(choices_obj){
+		//alert("ready");
+	}
+	
+	function display_profession_skill(choices_obj){
+		$('.workplace').slideUp('slow',function(){
+			$('.proffesional_skill').slideDown('slow',function(){
+			});
+		});
+		
+	}
+	
+	
+	function display_work_place_questionnaire(choices_obj){
+		$('.stresslevl').slideUp('slow',function(){
+			$('.workplace').slideDown('slow',function(){
+			});
+		});
+		
+		
+		$('.workplace_item').click(function(){
+			var workspace_selected = $(this).text();
+			$('.w_result').text("You have selected "+workspace_selected);
+			choices_obj.workspace_selected = workspace_selected
+			display_profession_skill(choices_obj);
+		});
+		
+		$('#workplace_next').click(function(){
+			var workspace_selected = choices_obj.workspace_selected;
+			if(workspace_selected == 'nothing added'){
+				alert('select an option first');
+			}else{
+				display_profession_skill(choices_obj);
+			}	
+		});	
+	}
+	
+	
+	(function(choices_obj){
+		$('.workplace').slideUp();
+		$('.thank_you').slideUp();
+		$('.proffesional_skill').slideUp();
+		$('.final_item').slideUp();
+		$('#submit_survey_button').slideUp();
+		
+		$('.btn_prevous').click(function(){
+			$('.thank_you').slideUp('slow',function(){
+				$('.final_item').slideDown('slow',function(){});
+			});
+		});
+		
+		$('.prev_final_item_button').click(function(){
+			$('.final_item').slideUp('slow',function(){
+				$('.proffesional_skill').slideDown('slow',function(){});
+			});
+		});
+		
+		$('.prev_proffession_next').click(function(){
+			$('.proffesional_skill').slideUp('slow',function(){
+				$('.workplace').slideDown('slow',function(){});
+			});
+			
+		});
+		$('.prev_workplace_next').click(function(){
+			$('.workplace').slideUp('slow',function(){
+				$('.stresslevl').slideDown('slow',function(){});
+			});
+			
+		});
+		$('.rating').click(function(){
+		choices_obj.stresslevel = $(this).text()
+		$('#result').text('You Selected '+choices_obj.stresslevel+' / 10 as your stress level');
+		display_work_place_questionnaire(choices_obj);
+		});
+		
+		$("#start_survey_button").click(function(){
+			$('.start_survey').slideUp('slow',function(){
+				$('.stresslevl').slideDown('slow',function(){});
+			});
+			
+		});
+		
+		$('#stresslevel').click(function(){
+			var stresslevel = choices_obj.stresslevel;
+			if(stresslevel == '-1'){
+			alert('please select stress level first')
+			}else{
+				display_work_place_questionnaire(choices_obj);
+			}
+		});
+		
+		$('#proffession_next').click(function(){
+			var profession_selected = $("#profession").val();
+			if(profession_selected == ''){
+				alert('please enter your profession');
+			}else{
+				$('.proffesional_skill').slideUp('slow',function(){});
+				$('.final_item').slideDown('slow',function(){});
+				choices_obj.proffesional_skill = profession_selected;
+				display_final_item(choices_obj);
+			}
+			
+		});
+		
+		$('input[type=radio][name=impact]').change(function() {
+			choices_obj.impact = this.value
+			$('#submit_survey_button').slideDown('slow',function(){});
+		});
+		
+		$('#final_item_button_sel').click(function(){
+			var itemSelected = $("input[name='impact']:checked").val();
+			if (!itemSelected) {
+				alert('Nothing is checked!');
+				return false;
+			}
+			else {submit_survey_button
+				choices_obj.impact = itemSelected
+				$('#submit_survey_button').slideDown('slow',function(){});
+				$('.final_item').slideUp('slow',function(){
+					$('.thank_you').slideDown('slow',function(){});
+				});
+				
+				$('#s_level').text('You selected Rating of '+ choices_obj.stresslevel);
+				$('#w_space').text('You would like to see  '+choices_obj.workspace_selected+' in your workspace');
+				$('#p_skill').text(choices_obj.proffesional_skill+' is your profession');
+				$('#image_detail').text('survey data for image '+ choices_obj.image_under_survey);
+				if(choices_obj.impact == 'yes'){
+					$('#impact').text('You want to make impact in the company');
+				}else{
+					$('#impact').text('You dont want to make impact in the company ');
+				}
+			}
+		});
+		
+	})(choices_obj);
+	
+	
+	</script>
+  </body>
+</html>
